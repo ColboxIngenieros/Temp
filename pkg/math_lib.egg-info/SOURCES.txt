@@ -1,0 +1,5 @@
+setup.py
+math_lib.egg-info/PKG-INFO
+math_lib.egg-info/SOURCES.txt
+math_lib.egg-info/dependency_links.txt
+math_lib.egg-info/top_level.txt
