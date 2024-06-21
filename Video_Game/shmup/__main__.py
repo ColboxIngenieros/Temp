@@ -1,11 +1,12 @@
 import sys
-from shmup.app import run
+from shmup.app import App
 
 def main(args = None):
     if args is None:
         args = sys.argv[1:]
     
-    run()
+    app = App()
+    app.run()
 
 if __name__ == '__main__':
     sys.exit(main())       #garantiza que la aplicacion se cierra de forma correcta
