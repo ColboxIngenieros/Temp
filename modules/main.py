@@ -1,3 +1,4 @@
+import os
 import my_pkg.Sub1_pkg.mod as m1
 import my_pkg.Sub2_pkg.mod2 as m2
 import my_pkg.Sub2_pkg.mod3 as m3
@@ -14,3 +15,12 @@ m3.bar()
 
 print(sn)
 #print(f"El maximo es: {max(some_numbers)}")
+
+#path = "res\VariasLineas.txt"
+path = ['res','VariasLineas.txt']
+path_solved = os.path.join(*path)
+print(path_solved)
+
+with open(path_solved) as mi_fichero:
+    for linea in mi_fichero:
+        print(linea, end='')
