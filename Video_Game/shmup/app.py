@@ -22,8 +22,8 @@ class App:
 
         self.__text = game_font.render("Space Invaders",True,(255,255,255),None)
 
-        self.__hero_image_half_width = self.__hero_image.get_width()/2
-        self.__hero_image_half_heigth = self.__hero_image.get_height()/2
+        #self.__hero_image_half_width = self.__hero_image.get_width()/2
+        #self.__hero_image_half_heigth = self.__hero_image.get_height()/2
         self.__hero_position = pygame.math.Vector2(240,550)
 
         #atributos de movimiento con teclado
@@ -32,7 +32,8 @@ class App:
         self.__hero_is_moving_left = False
         self.__hero_is_moving_right = False
 
-        self.__speed = 0.2
+        self.__speed = 0.3
+        self.__clock = pygame.time.Clock()
     
     def run(self): #metodo publico
 
@@ -40,8 +41,9 @@ class App:
 
         while self.__running:
             #Handle user input
+            delta_time = self.__clock.tick(60)  #60 fps = 1000/60 = 16 msecs
             self.__handle_input()   #se filtra el evento del usuario
-            self.__update()         #se actualizan los objetos del juego
+            self.__update(delta_time)         #se actualizan los objetos del juego
             self.__render()         #se renderiza y muestra por pantalla
         self.__release()   
 
@@ -68,7 +70,7 @@ class App:
         if key == pygame.K_RIGHT:
             self.__hero_is_moving_right = is_pressed
 
-    def __update(self): #metodo privado a traves de __
+    def __update(self, delta_time): #metodo privado a traves de __
        #Update game objects
         #x, y = pygame.mouse.get_pos() #obtenemos la posicion del raton
         #self.__hero_position.x -= self.__hero_image_half_width
@@ -84,7 +86,7 @@ class App:
         if self.__hero_is_moving_right:
             velocity.x +=self.__speed
         
-        self.__hero_position += velocity
+        self.__hero_position += velocity * delta_time
         
 
     
