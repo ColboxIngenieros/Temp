@@ -1,0 +1,16 @@
+{
+    "screen_size": [640,480],
+    "fps" : 60,
+    "bg_color" : [0,0,0],
+    "scroll" : {
+        "text" : "Todos los dias me levanto sin ganas de trabajar. Aguantando que el telefono no pare de sonar.",
+        "speed": 0.2
+    },
+    "font": {
+        "url" : "https://raw.githubusercontent.com/vany-viu/EPPY_ABR_24/main/02_EPPY/src/scroll/marquee/assets/fonts/agents2.png?token=GHSAT0AAAAAACT2OBRQI4YMIC26KVP4AW6MZTZYWDA",
+        "file_path": ["marquee.assets.fonts","agents2.png"],
+        "letter_size": [20,28],
+        "total_letters" : 45,
+        "letters_x_line": 15
+    }
+}

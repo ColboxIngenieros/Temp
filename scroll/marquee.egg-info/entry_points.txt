@@ -1,0 +1,2 @@
+[console_scripts]
+marquee = marquee.__main__:main
