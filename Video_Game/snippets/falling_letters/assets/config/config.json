@@ -1,5 +1,19 @@
 {
     "app":{
-        "screen_size": [480,640]
+        "screen_size": [480,640],
+        "fps": 60,
+        "bg_color": [0,0,0]
+    },
+
+    "font":{
+        "size": 40,
+        "filename": ["falling_letters.assets.fonts","Sansation_Regular.ttf"]
+    },
+
+    "letter":{
+        "margin": 40,
+        "scale":[0.5,2],
+        "speed":[0.1,1.0],
+        "colors": [40,255]
     }
 }
